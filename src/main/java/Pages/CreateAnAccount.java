@@ -1,6 +1,7 @@
 package Pages;
 
 import Basis.BasicOperations;
+import Basis.RandomString;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -18,10 +19,16 @@ public class CreateAnAccount extends BasicOperations {
 
     public void registerAccount() {
 
+        RandomString RandomString = new RandomString();
 
         firstName.sendKeys("Tester");
         middleName.sendKeys("Mc");
         lastName.sendKeys("Test");
+        email.sendKeys( RandomString + "@email.com");
+        password.sendKeys(RandomString+"");
+        confirmPassword.sendKeys();
+        signupForNewsCheckBox.click();
+        registerbtn.click();
 
     }
 

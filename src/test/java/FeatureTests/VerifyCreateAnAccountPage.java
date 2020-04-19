@@ -1,9 +1,9 @@
 package FeatureTests;
 
 import Basis.BasicOperations;
+import Basis.RandomString;
 import Pages.CreateAnAccount;
 import Pages.OverviewPage;
-import Pages.VerifyTopBar;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 public class VerifyCreateAnAccountPage extends BasicOperations {
 
     BasicOperations BasicOperations = new BasicOperations();
-    Pages.VerifyTopBar VerifyTopBar = new VerifyTopBar();
+    FeatureTests.VerifyTopBar VerifyTopBar = new VerifyTopBar();
 
     @BeforeMethod
     public void OpenChrome() {
@@ -28,7 +28,6 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
 
         OverviewPage OverviewPage = new OverviewPage();
         OverviewPage.accessRegistrationPage();
-
 
     }
 
@@ -57,10 +56,22 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
         assertTrue(CreateAnAccount.registerbtn.isDisplayed());
     }
 
+    @Test
+    public void createAnAccount() {
+
+
+        CreateAnAccount CreateAnAccount = new CreateAnAccount();
+
+        CreateAnAccount.registerAccount();
+
+    }
+/*
     @AfterMethod
     public void Close() {
 
         driver.quit();
 
     }
+
+ */
 }

@@ -2,7 +2,6 @@ package FeatureTests;
 
 import Basis.BasicOperations;
 import Pages.OverviewPage;
-import Pages.VerifyTopBar;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -12,7 +11,7 @@ import static org.testng.Assert.assertTrue;
 public class VerifyOverviewPage extends BasicOperations {
 
     BasicOperations BasicOperations = new BasicOperations();
-    Pages.VerifyTopBar VerifyTopBar = new VerifyTopBar();
+    FeatureTests.VerifyTopBar VerifyTopBar = new VerifyTopBar();
     
 
     @BeforeMethod

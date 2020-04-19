@@ -1,4 +1,4 @@
-package Pages;
+package FeatureTests;
 
 import Basis.BasicOperations;
 import Pages.OverviewPage;
