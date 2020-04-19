@@ -1,5 +1,6 @@
-package Basis;
+package Pages;
 
+import Basis.BasicOperations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

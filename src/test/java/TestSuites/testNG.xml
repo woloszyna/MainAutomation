@@ -1,0 +1,8 @@
+<suite name="Regression Suite ">
+    <test name="functional Regression">
+        <classes>
+            <class name="FeatureTests.VerifyOverviewPage"/> <!--a full name of the class incl. package.class-->
+            <class name="FeatureTests.VerifyCreateAnAccountPage"/>
+        </classes>
+    </test>
+</suite>
