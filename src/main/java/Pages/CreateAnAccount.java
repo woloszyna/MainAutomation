@@ -1,9 +1,9 @@
 package Pages;
 
 import Basis.BasicOperations;
-import Basis.RandomString;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import java.sql.Timestamp;
 
 public class CreateAnAccount extends BasicOperations {
 
@@ -19,14 +19,16 @@ public class CreateAnAccount extends BasicOperations {
 
     public void registerAccount() {
 
-        RandomString RandomString = new RandomString();
+        //To implement random string from Milliseconds
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        long value = timestamp.getTime();
 
         firstName.sendKeys("Tester");
         middleName.sendKeys("Mc");
         lastName.sendKeys("Test");
-        email.sendKeys( RandomString + "@email.com");
-        password.sendKeys(RandomString+"");
-        confirmPassword.sendKeys();
+        email.sendKeys(value + "@email.com");
+        password.sendKeys(value + "");
+        confirmPassword.sendKeys(value + "");
         signupForNewsCheckBox.click();
         registerbtn.click();
 

@@ -3,7 +3,9 @@ package FeatureTests;
 import Basis.BasicOperations;
 import Basis.RandomString;
 import Pages.CreateAnAccount;
+import Pages.MyDashboard;
 import Pages.OverviewPage;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,15 +33,16 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
 
     }
 
-    @Test
+    @Test (priority = 3)
     //Verify Top-bar on every page
     public void verifyTopBar() {
 
         VerifyTopBar.assertTopBar();
+        BasicOperations.takeScreenshot();
 
     }
 
-    @Test
+    @Test (priority = 4)
     public void verifyPage() {
 
         CreateAnAccount CreateAnAccount = new CreateAnAccount();
@@ -56,16 +59,18 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
         assertTrue(CreateAnAccount.registerbtn.isDisplayed());
     }
 
-    @Test
+    @Test (priority = 5)
     public void createAnAccount() {
 
-
         CreateAnAccount CreateAnAccount = new CreateAnAccount();
-
         CreateAnAccount.registerAccount();
 
+        MyDashboard MyDashboard = new MyDashboard();
+        Assert.assertEquals("Thank you for registering with Madison Island.", MyDashboard.RegSuccess.getText());
+
+
     }
-/*
+
     @AfterMethod
     public void Close() {
 
@@ -73,5 +78,5 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
 
     }
 
- */
+
 }

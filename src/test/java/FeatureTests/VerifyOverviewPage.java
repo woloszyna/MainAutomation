@@ -20,7 +20,7 @@ public class VerifyOverviewPage extends BasicOperations {
         BasicOperations.OpenChrome();
     }
 
-    @Test
+    @Test ()
     //Verify Top-bar on every page
     public void verifyTopBar() {
 
@@ -28,7 +28,7 @@ public class VerifyOverviewPage extends BasicOperations {
 
     }
 
-    @Test
+    @Test (priority = 1)
     //Verify all elements on Overview page
     public void verifyOverviewPage() {
 
@@ -45,6 +45,7 @@ public class VerifyOverviewPage extends BasicOperations {
         assertTrue(OverviewPage.subscribeBtn.isDisplayed());
 
         OverviewPage.accountlink.click();
+
         assertTrue(OverviewPage.myAccount.isDisplayed());
         assertTrue(OverviewPage.myWishList.isDisplayed());
         assertTrue(OverviewPage.myCart.isDisplayed());
