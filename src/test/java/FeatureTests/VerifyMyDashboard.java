@@ -5,6 +5,7 @@ import Pages.CreateAnAccount;
 import Pages.MyDashboard;
 import Pages.OverviewPage;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -48,8 +49,8 @@ public class VerifyMyDashboard extends BasicOperations {
 
     @Test(priority = 7)
     public void verifyPage() {
-        MyDashboard MyDashboard = new MyDashboard();
         CreateAnAccount CreateAnAccount = new CreateAnAccount();
+        MyDashboard MyDashboard = new MyDashboard();
 
         Assert.assertTrue(MyDashboard.RegSuccess.isDisplayed());
         Assert.assertTrue(MyDashboard.MyAccount.isDisplayed());
@@ -76,11 +77,14 @@ public class VerifyMyDashboard extends BasicOperations {
         Assert.assertTrue(MyDashboard.MyDLProds.isDisplayed());
         Assert.assertEquals(MyDashboard.MyDLProds.getAttribute("href"), "http://demo-store.seleniumacademy.com/downloadable/customer/products/");
         Assert.assertTrue(MyDashboard.ContactInfoEmail.isDisplayed());
-        //Assert.assertEquals(MyDashboard.ContactInfoEmail.getText());
+        //Get the email from the element and assert against the variable in CreateAnAccount.Email
+    }
 
+    @AfterMethod
+    public void Close() {
 
-
-
+        BasicOperations.takeScreenshot();
+        BasicOperations.Close();
     }
 
 }

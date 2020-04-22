@@ -8,7 +8,7 @@ public class MyDashboard extends BasicOperations {
 
     public WebElement RegSuccess = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[2]/div[2]/div/ul/li/ul/li/span"));
     public WebElement MyAccount = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[1]/div/div[1]/strong/span"));
-    public WebElement AccDashboard = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[1]/div/div[2]/ul/li[1]/a/strong"));
+    public WebElement AccDashboard = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[1]/div/div[2]/ul/li[1]/a"));
     public WebElement AccInformation = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[1]/div/div[2]/ul/li[2]/a"));
     public WebElement AddressBook = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[1]/div/div[2]/ul/li[3]/a"));
     public WebElement MyOrders = driver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div[2]/div[2]/div/div[1]/div/div[2]/ul/li[4]/a"));
