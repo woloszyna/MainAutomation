@@ -19,6 +19,7 @@ public class BasicOperations {
 
     public void OpenChrome() {
         System.setProperty("webdriver.chrome.driver", "WebDrivers/chromedriverv80");
+        System.setProperty("webdriver.chrome.driver", "WebDrivers/Winchromedriverv81.exe");
         driver = new ChromeDriver();
         driver.get("http://demo-store.seleniumacademy.com/");
         driver.manage().window().maximize();
