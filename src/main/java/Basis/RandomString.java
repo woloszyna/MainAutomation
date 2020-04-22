@@ -18,4 +18,19 @@ public class RandomString {
 
         }
 
+        /*
+        public static void timestamp() {
+
+                //method 2 - via Date
+
+                Date date = new Date();
+                long timestamp = date.getTime();
+
+                System.out.println(timestamp);
+        }
+
+         */
+
+
+
 }
