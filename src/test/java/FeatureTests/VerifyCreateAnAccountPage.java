@@ -72,9 +72,16 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
     }
 
     @AfterMethod
+    public void screenshot(){
+
+        BasicOperations.takeScreenshot();
+
+    }
+
+    @AfterMethod
     public void Close() {
 
-        driver.quit();
+        BasicOperations.Close();
 
     }
 

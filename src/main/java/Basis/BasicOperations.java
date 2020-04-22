@@ -3,7 +3,6 @@ package Basis;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.awt.AWTException;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
@@ -11,6 +10,8 @@ import java.awt.Robot;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.File;
+import java.security.Timestamp;
+import java.util.Date;
 import javax.imageio.ImageIO;
 
 public class BasicOperations {
@@ -38,8 +39,11 @@ public class BasicOperations {
                     Thread.sleep(120);
                     Robot r = new Robot();
 
+                    Date date = new Date();
+                    long timestamp = date.getTime();
+
                     // It saves screenshot to desired path
-                    String path = "ScreenShots/screenshot.jpg";
+                    String path = "ScreenShots/screenshot"+timestamp+".jpg";
 
                     // Used to get ScreenSize and capture image
                     Rectangle capture =
