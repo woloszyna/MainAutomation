@@ -71,19 +71,18 @@ public class VerifyCreateAnAccountPage extends BasicOperations {
 
     }
 
+    @Test
+    public void loginTest() {
+
+
+    }
+
     @AfterMethod
     public void screenshot(){
 
         BasicOperations.takeScreenshot();
-
-    }
-
-    @AfterMethod
-    public void Close() {
-
         BasicOperations.Close();
 
     }
-
 
 }

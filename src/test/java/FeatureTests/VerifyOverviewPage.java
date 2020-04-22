@@ -56,15 +56,9 @@ public class VerifyOverviewPage extends BasicOperations {
     }
 
     @AfterMethod
-    public void screenshot(){
-
-        BasicOperations.takeScreenshot();
-
-    }
-
-    @AfterMethod
     public void Close() {
 
+            BasicOperations.takeScreenshot();
             BasicOperations.Close();
         }
 

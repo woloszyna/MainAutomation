@@ -22,11 +22,12 @@ public class CreateAnAccount extends BasicOperations {
         //To implement random string from Milliseconds
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         long value = timestamp.getTime();
+        String Email = value + "@email.com";
 
         firstName.sendKeys("Tester");
         middleName.sendKeys("Mc");
         lastName.sendKeys("Test");
-        email.sendKeys(value + "@email.com");
+        email.sendKeys(Email);
         password.sendKeys(value + "");
         confirmPassword.sendKeys(value + "");
         signupForNewsCheckBox.click();
