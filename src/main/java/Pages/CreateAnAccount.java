@@ -17,12 +17,12 @@ public class CreateAnAccount extends BasicOperations {
     public WebElement signupForNewsCheckBox = driver.findElement(By.xpath("//*[@id=\"is_subscribed\"]"));
     public WebElement registerbtn = driver.findElement(By.xpath("//*[@id=\"form-validate\"]/div[2]/button/span/span"));
 
-    public void registerAccount() {
+    //To implement random string from Milliseconds
+    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    long value = timestamp.getTime();
+    String Email = value + "@email.com";
 
-        //To implement random string from Milliseconds
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        long value = timestamp.getTime();
-        String Email = value + "@email.com";
+    public void registerAccount() {
 
         firstName.sendKeys("Tester");
         middleName.sendKeys("Mc");
